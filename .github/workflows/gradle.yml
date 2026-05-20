@@ -38,7 +38,7 @@ jobs:
       run: ./gradlew build
 
     - name: Create Pull Request to Main
-      if: github.ref == 'refs/heads/develop'
+      if: success() && github.ref == 'refs/heads/develop'
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
