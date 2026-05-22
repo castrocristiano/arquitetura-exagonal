@@ -5,8 +5,8 @@ import br.com.castrosoft.exagonal.application.ports.out.FindAddressByZipCodeOutp
 import br.com.castrosoft.exagonal.application.ports.out.InsertCustomerOutputPort
 
 class InsertCustomerUseCase (
-    var findAddressByZipCodeOutputPort: FindAddressByZipCodeOutputPort,
-    var insertCustomerOutputPort: InsertCustomerOutputPort
+    val findAddressByZipCodeOutputPort: FindAddressByZipCodeOutputPort,
+    val insertCustomerOutputPort: InsertCustomerOutputPort
 ){
 
     fun insert(customer: Customer, zipCode: String) {
