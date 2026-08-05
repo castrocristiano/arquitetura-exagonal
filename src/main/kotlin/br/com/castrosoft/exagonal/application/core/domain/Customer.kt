@@ -3,7 +3,7 @@ package br.com.castrosoft.exagonal.application.core.domain
 data class Customer(
     val id: String? = null,
     val name: String,
-    val address: Address? = null,
+    var address: Address? = null,
     val cpf: String,
     val isValidCpf: Boolean = false
 ) {
